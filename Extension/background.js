@@ -123,10 +123,17 @@ chrome.storage.onChanged.addListener(function (changes) {
 chrome.runtime.onMessage.addListener(function (response, sender, SendResponse) {
   console.log("message got to background");
   if (!filteredSites.includes(response)) {
-    filteredSites.push(response);
+    addToFilteredURLList(response).then(SendResponse);
     console.log("added");
-    chrome.storage.local.set({
-      filteredURLs: filteredSites,
-    });
+    setFilteredURLS(filteredSites).then(SendResponse);
   }
 });
+async function addToFilteredURLList(response) {
+  filteredSites.push(response);
+}
+
+async function setFilteredURLS(filteredSites) {
+  chrome.storage.local.set({
+    filteredURLs: filteredSites,
+  });
+}

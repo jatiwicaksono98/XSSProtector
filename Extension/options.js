@@ -21,17 +21,20 @@ function onAddWebsite(e) {
   e.preventDefault();
 
   const url = document.getElementById("url").value;
-
-  tbodyEl.innerHTML += `
+  if (!trustedURLs.includes(url)) {
+    tbodyEl.innerHTML += `
             <tr>
                 <td><h4 class="hello">${url}</h4></td>
                 <td><button class="deleteBtn">Delete</button></td>
             </tr>
         `;
-  trustedURLs.push(url);
-  chrome.storage.local.set({
-    filteredURLs: trustedURLs,
-  });
+
+    trustedURLs.push(url);
+    chrome.storage.local.set({
+      filteredURLs: trustedURLs,
+    });
+  }
+  formEl.reset();
 }
 
 function onDeleteRow(e) {
