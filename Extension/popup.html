@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>Reflected XSS Protector</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1 id="navigateToOption" style="text-align: center;color: white;font-size: 24px;">XSS Protector</h1>
+    <input id="chck" type="checkbox">
+    <label for="chck" class="check-trail">
+      <span class="check-handler"></span>
+    </label>
+
+    
+    <!-- <h3 id="currentBlockingStatus"></h3> -->
+    <h3 id="dateTime" style="color: white;font-size: 18px;margin-left: 5px;"></h3> 
+    <h4 id="MLResult" style="color: white;font-size: 18px;display:inline-block;margin-left: 5px;">Machine Learning Prediction :&nbsp;<h4 id="malben" style="font-size: 18px;display:inline-block"></h4></h4>
+    
+    <h4 id="onUrl" style="color: white;font-size: 18px;margin-left: 5px;">On URL :</h4>
+    <button id="showAnalysis" class="button button2">Show more detail</button>  
+    <div id="show"style="display: none">  
+      
+      <h4 id="decodedURL"  style="color: white;font-size: 18px;margin-left: 5px;"></h4>
+      <h4  style="color: white;font-size: 18px;margin-left: 5px; ">URL's Suspected Content :<p id="maltent" style="font-size: 18px;margin-left:5px; color:white;"></p></h4>
+   </div> 
+   
+    <h4 style="color: white;font-size: 18px;margin-left: 5px;">With the given analysis, would you like to open the URL?</h4>
+    
+    <button class="button button2"id="goThroughProtect" >Open site</button>
+
+    <button id="markTrusted" class="button button2" >Mark site as trusted</button>
+    <p style="display: inline-block; color: white;font-size: 18px;margin-left: 5px;" >List of trusted sites could be found on the&nbsp;<p id ="navigateToOption" style="display: inline-block;font-size: 18px;color:yellow">option page</p></p>
+    <br><br>
+    
+
+  <script src="popup.js"></script>
+</html>

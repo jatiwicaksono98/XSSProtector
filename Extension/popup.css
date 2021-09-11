@@ -1,0 +1,108 @@
+h1 {
+  color: white;
+  cursor: pointer;
+}
+
+p {
+  word-wrap: break-word;
+}
+h4 {
+  word-wrap: break-word;
+}
+
+#navigateToOption {
+  cursor: pointer;
+  color: blue;
+}
+
+/* Hide the input */
+input[type="checkbox"] {
+  position: absolute;
+
+  opacity: 0;
+  z-index: -1;
+}
+
+.check-trail {
+  display: flex;
+  align-items: center;
+
+  width: 43em;
+  height: 45px;
+  background: #2c3e50;
+  border-radius: 1em;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.check-handler {
+  display: flex;
+  margin-left: 0.5em;
+  justify-content: center;
+  align-items: center;
+  width: 21em;
+  height: 35px;
+  background: #34495e;
+  border-radius: 0%;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.check-handler:before {
+  content: "Off/Inactive";
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input[type="checkbox"]:checked + .check-trail {
+  background: #34495e;
+}
+input[type="checkbox"]:checked + .check-trail .check-handler {
+  margin-left: 50%;
+  background: whitesmoke;
+}
+input[type="checkbox"]:checked + .check-trail .check-handler::before {
+  content: "On/Active";
+  color: #34495e;
+}
+
+body {
+  background-color: #193945;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+  width: 465px;
+  border: 2px solid white;
+  margin: 0 auto;
+  padding: 0%;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  margin-left: 5px;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button2 {
+  margin-left: 5px;
+  background-color: #34495e;
+  color: white;
+  font-family: "Archivo", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  /* border: 2px solid white; */
+}
+
+.button2:hover {
+  background-color: #008cba;
+  color: white;
+  font-weight: bold;
+}
