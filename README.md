@@ -19,8 +19,6 @@ To add the extension into your Google Chrome browser:
 
 By now, the extension should be ready to be used
 
-The extension's UI is believed to be self-explanatory
-
 Please feel free to email me at cl20627@bristol.ac.uk if there is any question regarding this project
 
 Note : Currently the extension would communicate with localhost:5000 where the MLServer was put
