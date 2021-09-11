@@ -6,7 +6,7 @@ The dataset inside the MLServer folder was the modified version of the dataset f
 
 It was modified to only focus on detecting Reflected XSS
 
-To run the machine learning server, please go to the MLServer server and run this command:
+To run the machine learning server, please go to the MLServer folder and run this command:
 
           uvicorn MLServer:app --reload --host 0.0.0.0 --port 5000
           
