@@ -15,12 +15,12 @@ The port and host used in the command are port 5000 and host 0.0.0.0, could be c
 To add the extension into your Google Chrome browser: 
 
 1. Open Google Chrome and go to the URL chrome://extensions/
-2. Click the "Load Unpacked" button on the top right part of screen
+2. Click the "Load Unpacked" button on the top left part of screen
 
 By now, the extension should be ready to be used
 
 Note : Currently the extension would communicate with localhost:5000 where the MLServer was put
-       If the port where the MLServer running was changed, please also changed the code inside the extension
-       It would be on the 'background.js' file
+       If the port where the MLServer running was changed, please also change the code inside the extension
+       The code would be on the 'background.js' file
 
 
