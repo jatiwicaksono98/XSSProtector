@@ -134,8 +134,8 @@ const markTrusted = document.getElementById("markTrusted");
 markTrusted.addEventListener("click", () => {
   chrome.runtime.sendMessage(url);
 
-  if (url.substring(0, 5) === "http:") {
-    console.log("https" + url.substring(4));
-    chrome.runtime.sendMessage("https" + url.substring(4));
-  }
+  // if (url.substring(0, 5) === "http:") {
+  //   console.log("https" + url.substring(4));
+  //   chrome.runtime.sendMessage("https" + url.substring(4));
+  // }
 });

@@ -1,10 +1,11 @@
-let trustedURLs = [];
+let trustedURLs;
 
 chrome.storage.local.get(["filteredURLs"], (res) => {
   trustedURLs = res.filteredURLs;
 });
 setTimeout(() => {
   for (let i = 0; i < trustedURLs.length; i++) {
+    console.log(trustedURLs);
     tbodyEl.innerHTML += `
     <tr>
         <td><h4 class="hello">${trustedURLs[i]}</h4></td>
